@@ -1,0 +1,9 @@
+<h1>Sandwiches</h1>
+
+<ul>
+	<!-- we are accessing the variable @sandwiches with a .each loop -->
+	<% @sandwiches.each do |sandwich| %>
+	<!-- we print the li tag for each element, giving a unique link to each sandwich name corresponding to the ID value -->
+		<li>Sandwich Name: <a href="/sandwiches/<%= sandwich.id %>"><%= sandwich.name %></a> </li>
+	<% end %>
+</ul>
