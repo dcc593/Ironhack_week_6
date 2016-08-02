@@ -8,6 +8,9 @@
 </head>
 <body>
 
+	<% flash.each do |key, val| %>
+		<%= content_tag :div, val, id: key, style: "color: red;" %>
+	<%end%>
 <%= yield %>
 
 </body>

@@ -5,5 +5,7 @@
 	
   <%= link_to "Sign up", "/signup" %><br>
   <%= link_to "My profile", "/profile" %><br>
-  <%= link_to "All profiles", "/users" %>
 
+  <% if current_user && current_user.role == "admin" %>
+  <%= link_to "All profiles", "/users" %>
+  <% end %>

@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
+  before_action :authorize_user, only: [:show]
+  before_action :admin_only, only: [:index]
 
   # renders the home page
 def home
   @name = current_user ? current_user.username : "Ironhacker"
+
 end
 
   def index
