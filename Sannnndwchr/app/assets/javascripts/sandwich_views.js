@@ -49,7 +49,7 @@ function updateList(arguments){
 				<li><span><strong>Ingredient:</strong> ${newIngredient.name}, <strong>Calories:</strong> ${newIngredient.calories} </span></li>
 	`;
 	//here I append that piece of html to the <ul> list in the main show.html.erb file
-	$('ul').append(html);
+	$('.js-sanwich').append(html);
 };
 
 //handles the error
